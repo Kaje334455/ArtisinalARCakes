@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artisanal AR - Luxury Confections</title>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">Artisanal AR</div>
+        <ul class="nav-links">
+          <li><a href="Homepage.html#cakes">Cakes</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Exquisite Artisan Confections</h1>
+      <p>Experience our handcrafted creations in immersive detail</p>
+    </section>
+
+    <!-- Featured Cake: Chocolate Delight -->
+    <div class="featured-cake">
+      <div class="featured-model-container">
+        <model-viewer
+          src="chocolate.glb"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          tone-mapping="neutral"
+          shadow-intensity="1"
+        >
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" class="ar-button">View in your space</button>
+        </model-viewer>
+      </div>
+      <div class="featured-details">
+        <h3 class="cake-title">Our Artisan Collection</h3>
+        <p class="cake-description">
+          Discover our exquisite selection of handcrafted confections, where
+          tradition meets innovation in every delicate creation.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-content">
+      <div class="cakes-grid" id="cakes">
+        <!-- Cake 2: Strawberry Swirl Flower and Macaron Cake -->
+        <div class="cake-card">
+          <div class="model-viewer-container">
+            <model-viewer
+              src="flower-cake.glb"
+              alt="Fleur de Fraise 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="neutral"
+              shadow-intensity="1"
+            >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" class="ar-button">
+                View in your space
+              </button>
+            </model-viewer>
+          </div>
+          <div class="cake-info">
+            <h3 class="cake-title">Fleur de Fraise</h3>
+            <p class="cake-description">
+              An exquisite strawberry swirl cake adorned with delicate macarons
+              and floral elegance. A celebration of French patisserie artistry.
+            </p>
+            <div class="cake-price">$42.99</div>
+            <div class="cake-actions">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 3: Matcha and Chocolate Macaron Cheesecake -->
+        <div class="cake-card">
+          <div class="model-viewer-container">
+            <model-viewer
+              src="Macarons-cake.glb"
+              alt="Thé et Chocolat 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="neutral"
+              shadow-intensity="1"
+            >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" class="ar-button">
+                View in your space
+              </button>
+            </model-viewer>
+          </div>
+          <div class="cake-info">
+            <h3 class="cake-title">Thé et Chocolat</h3>
+            <p class="cake-description">
+              A harmonious blend of matcha and chocolate macaron cheesecake.
+              Where Japanese elegance meets French sophistication.
+            </p>
+            <div class="cake-price">$48.99</div>
+            <div class="cake-actions">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 4: Strawberry and Vanilla Bear Shortcake -->
+        <div class="cake-card">
+          <div class="model-viewer-container">
+            <model-viewer
+              src="strawberry.glb"
+              alt="Ourson de Fraise 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="neutral"
+              shadow-intensity="1"
+            >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" class="ar-button">
+                View in your space
+              </button>
+            </model-viewer>
+          </div>
+          <div class="cake-info">
+            <h3 class="cake-title">Ourson de Fraise</h3>
+            <p class="cake-description">
+              A whimsical strawberry and vanilla bear shortcake. Delightfully
+              charming with layers of fresh strawberries and vanilla cream.
+            </p>
+            <div class="cake-price">$44.99</div>
+            <div class="cake-actions">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 5: Black Forest Bear Cake -->
+        <div class="cake-card">
+          <div class="model-viewer-container">
+            <model-viewer
+              src="chocolate.glb"
+              alt="Forêt Noire Ours 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="neutral"
+              shadow-intensity="1"
+            >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" class="ar-button">
+                View in your space
+              </button>
+            </model-viewer>
+          </div>
+          <div class="cake-info">
+            <h3 class="cake-title">Forêt Noire Ours</h3>
+            <p class="cake-description">
+              A majestic black forest bear cake. Rich chocolate layers with
+              cherries and cream, crowned with a charming bear design.
+            </p>
+            <div class="cake-price">$46.99</div>
+            <div class="cake-actions">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake 6: Floral Lemon Cake -->
+        <div class="cake-card">
+          <div class="model-viewer-container">
+            <model-viewer
+              src="flower-flat-25.glb"
+              alt="Citron Fleuri 3D"
+              ar
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="neutral"
+              shadow-intensity="1"
+            >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" class="ar-button">
+                View in your space
+              </button>
+            </model-viewer>
+          </div>
+          <div class="cake-info">
+            <h3 class="cake-title">Citron Fleuri</h3>
+            <p class="cake-description">
+              A delicate floral lemon cake adorned with edible blossoms. Bright,
+              zesty, and beautifully elegant.
+            </p>
+            <div class="cake-price">$43.99</div>
+            <div class="cake-actions">
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Artisanal AR</h3>
+          <p>Where tradition meets innovation in every confection</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="Homepage.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <ul>
+              <li>
+                <a href="mailto:info@artisanalar.com">info@artisanalar.com</a>
+              </li>
+              <li>+1 (555) 123-4567</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Artisanal AR. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
