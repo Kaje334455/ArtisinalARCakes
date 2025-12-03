@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- ============================================
+         HEADER & NAVIGATION
+         ============================================ -->
     <header class="header">
       <div class="header-content">
         <div class="logo">Artisanal AR</div>
@@ -22,27 +25,132 @@
       </div>
     </header>
 
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
     <section class="hero">
       <h1>Exquisite Artisan Confections</h1>
       <p>Experience our handcrafted creations in immersive detail</p>
     </section>
 
-    <!-- Featured Cake: Chocolate Delight -->
+    <!-- ============================================
+         SCROLL-DRIVEN IMAGE SEQUENCE HERO
+         Shows 5 stages of cake decoration as user scrolls
+         ============================================ -->
+    <section class="featured-cake-sequence">
+      <div class="sequence-wrapper">
+        <div class="sequence-container">
+          <div class="sequence-image-container">
+            <!-- Frame 0: Unfrosted -->
+            <div class="sequence-frame active" data-frame="0">
+              <div class="sequence-text sequence-text-left">
+                <h2 class="sequence-stage">Stage 1: The Foundation</h2>
+                <p class="sequence-description">Unfrosted</p>
+                <p class="sequence-message">
+                  Our work embodies the work put into it. Every masterpiece
+                  begins with a solid foundation.
+                </p>
+              </div>
+              <img
+                src="FirstImage.png"
+                alt="Unfrosted Cake"
+                class="sequence-image"
+              />
+            </div>
+
+            <!-- Frame 1: First Frosting -->
+            <div class="sequence-frame" data-frame="1">
+              <img
+                src="SecondImage.png"
+                alt="First Frosting Stage"
+                class="sequence-image"
+              />
+              <div class="sequence-text sequence-text-right">
+                <h2 class="sequence-stage">Stage 2: The Base</h2>
+                <p class="sequence-description">First Layer of Frosting</p>
+                <p class="sequence-message">
+                  Smooth, even layers form the canvas for our artistry.
+                  Precision in every stroke.
+                </p>
+              </div>
+            </div>
+
+            <!-- Frame 2: Decoration Begins -->
+            <div class="sequence-frame" data-frame="2">
+              <div class="sequence-text sequence-text-left">
+                <h2 class="sequence-stage">Stage 3: The Art Begins</h2>
+                <p class="sequence-description">Initial Decoration</p>
+                <p class="sequence-message">
+                  Where creativity meets craftsmanship. Each detail tells a
+                  story of dedication.
+                </p>
+              </div>
+              <img
+                src="ThirdImage.png"
+                alt="Decoration Begins"
+                class="sequence-image"
+              />
+            </div>
+
+            <!-- Frame 3: Advanced Decoration -->
+            <div class="sequence-frame" data-frame="3">
+              <img
+                src="FourthImage.png"
+                alt="Advanced Decoration"
+                class="sequence-image"
+              />
+              <div class="sequence-text sequence-text-right">
+                <h2 class="sequence-stage">Stage 4: Refinement</h2>
+                <p class="sequence-description">Advanced Decoration</p>
+                <p class="sequence-message">
+                  Layers of elegance come together. The vision takes shape with
+                  every delicate touch.
+                </p>
+              </div>
+            </div>
+
+            <!-- Frame 4: Final Product -->
+            <div class="sequence-frame" data-frame="4">
+              <div class="sequence-text sequence-text-left">
+                <h2 class="sequence-stage">Stage 5: The Masterpiece</h2>
+                <p class="sequence-description">Final Product</p>
+                <p class="sequence-message">
+                  A celebration of artistry and passion. Our work embodies the
+                  work put into it—from foundation to final flourish.
+                </p>
+              </div>
+              <img
+                src="FifthImage.png"
+                alt="Final Product"
+                class="sequence-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURED CAKE SECTION
+         Main featured cake with 3D model viewer
+         ============================================ -->
     <div class="featured-cake">
       <div class="featured-model-container">
         <model-viewer
           src="chocolate.glb"
+          poster="ForetNoireOursPH.png"
           ar
           ar-modes="webxr scene-viewer quick-look"
           camera-controls="disable-zoom=true"
           tone-mapping="neutral"
           shadow-intensity="1"
           disable-zoom="true"
+          auto-rotate="false"
+          data-scroll-rotate="true"
         >
           <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
           </div>
-          <button slot="ar-button" class="ar-button">View in your space</button>
         </model-viewer>
       </div>
       <div class="featured-details">
@@ -54,6 +162,10 @@
       </div>
     </div>
 
+    <!-- ============================================
+         CAKES GRID SECTION
+         Display of all available cakes with 3D models
+         ============================================ -->
     <div class="container-content">
       <div class="cakes-grid" id="cakes">
         <!-- Cake 2: Strawberry Swirl Flower and Macaron Cake -->
@@ -61,19 +173,19 @@
           <div class="model-viewer-container">
             <model-viewer
               src="flower-cake.glb"
+              poster="FleurDeFraisePH.png"
               alt="Fleur de Fraise 3D"
               ar
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="neutral"
               shadow-intensity="1"
+              auto-rotate="false"
+              data-scroll-rotate="true"
             >
               <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
               </div>
-              <button slot="ar-button" class="ar-button">
-                View in your space
-              </button>
             </model-viewer>
           </div>
           <div class="cake-info">
@@ -94,19 +206,19 @@
           <div class="model-viewer-container">
             <model-viewer
               src="Macarons-cake.glb"
+              poster="TheEtChocolatPH.png"
               alt="Thé et Chocolat 3D"
               ar
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="neutral"
               shadow-intensity="1"
+              auto-rotate="false"
+              data-scroll-rotate="true"
             >
               <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
               </div>
-              <button slot="ar-button" class="ar-button">
-                View in your space
-              </button>
             </model-viewer>
           </div>
           <div class="cake-info">
@@ -127,19 +239,19 @@
           <div class="model-viewer-container">
             <model-viewer
               src="strawberry.glb"
+              poster="OursonDeFraisePH.png"
               alt="Ourson de Fraise 3D"
               ar
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="neutral"
               shadow-intensity="1"
+              auto-rotate="false"
+              data-scroll-rotate="true"
             >
               <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
               </div>
-              <button slot="ar-button" class="ar-button">
-                View in your space
-              </button>
             </model-viewer>
           </div>
           <div class="cake-info">
@@ -160,19 +272,19 @@
           <div class="model-viewer-container">
             <model-viewer
               src="chocolate.glb"
+              poster="ForetNoireOursPH.png"
               alt="Forêt Noire Ours 3D"
               ar
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="neutral"
               shadow-intensity="1"
+              auto-rotate="false"
+              data-scroll-rotate="true"
             >
               <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
               </div>
-              <button slot="ar-button" class="ar-button">
-                View in your space
-              </button>
             </model-viewer>
           </div>
           <div class="cake-info">
@@ -193,19 +305,19 @@
           <div class="model-viewer-container">
             <model-viewer
               src="flower-flat-25.glb"
+              poster="CitronFleuri.png"
               alt="Citron Fleuri 3D"
               ar
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="neutral"
               shadow-intensity="1"
+              auto-rotate="false"
+              data-scroll-rotate="true"
             >
               <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
               </div>
-              <button slot="ar-button" class="ar-button">
-                View in your space
-              </button>
             </model-viewer>
           </div>
           <div class="cake-info">
@@ -223,6 +335,9 @@
       </div>
     </div>
 
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-brand">
